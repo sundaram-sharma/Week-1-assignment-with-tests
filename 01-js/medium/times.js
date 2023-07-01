@@ -8,5 +8,16 @@ Hint - use Date class exposed in JS
 */
 
 function calculateTime(n) {
-    return 0.01;
+    let sum = 0;
+    for(i=1; i<=n; i++)
+    {
+        sum = sum + i
+        
+    }
 }
+
+let start = Date.now();
+calculateTime(9000000);
+let timeTaken = (Date.now() - start)/1000;
+
+console.log("Time Taken:"+ timeTaken + " Seconds");

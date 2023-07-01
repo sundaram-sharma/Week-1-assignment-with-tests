@@ -7,7 +7,22 @@
 */
 
 function isPalindrome(str) {
-  return true;
+
+  let temp1 = str.toLowerCase().replace(/\W/g, '');
+  let rev_str = "";
+    for (let i = temp1.length - 1; i >= 0; i--) {
+        rev_str += temp1[i];
+    }
+  if(rev_str === temp1){
+    console.log("Palindrome")
+    return true
+  }
+  else{
+    console.log("Not Palindrome")
+    return false;
+  }
 }
+
+isPalindrome("iidii");
 
 module.exports = isPalindrome;

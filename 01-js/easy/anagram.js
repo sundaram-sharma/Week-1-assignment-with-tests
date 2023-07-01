@@ -8,7 +8,27 @@
 */
 
 function isAnagram(str1, str2) {
+let len1 = str1.length;
+let leg2 = str2.length;
+if(len1 !== leg2 ){
+  console.log("Invalid length, make sure the length are equal")
+  return false
+}
+else{
+  let st1 = str1.toLowerCase().split('').sort().join('');
+  let st2 = str2.toLowerCase().split('').sort().join('');
+  if(st1 === st2){
+    console.log(true);
+    return true;
+  }
+  else{
+    console.log(false);
+    return false
+  }
+}
 
 }
+
+isAnagram("india", "niida");
 
 module.exports = isAnagram;
