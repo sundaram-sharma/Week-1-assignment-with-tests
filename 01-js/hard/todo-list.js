@@ -10,9 +10,30 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-todo-list`
 */
+var listOfTodos = []
 
 class Todo {
 
+  add(todo)
+  {
+    listOfTodos = listOfTodos + todo;
+  }
+  remove(indexOfTodo)
+  {
+    listOfTodos.splice(indexOfTodo, 1)
+  }
+  update(index, updatedTodo)
+  {
+    listOfTodos.splice(index, 1, updatedTodo)
+  }
+  getAll()
+  {
+    return listOfTodos;
+  }
+  get(indexOfTodo)
+  {
+    
+  }
 }
 
 module.exports = Todo;
