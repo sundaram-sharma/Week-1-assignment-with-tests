@@ -16,15 +16,15 @@ class Todo {
 
   add(todo)
   {
-    listOfTodos = listOfTodos + todo;
+    listOfTodos.push(todo)
   }
   remove(indexOfTodo)
   {
-    listOfTodos.splice(indexOfTodo, 1)
+    listOfTodos.splice(indexOfTodo, listOfTodos.length);
   }
   update(index, updatedTodo)
   {
-    listOfTodos.splice(index, 1, updatedTodo)
+    listOfTodos.splice(index, 1, updatedTodo);
   }
   getAll()
   {
@@ -32,8 +32,20 @@ class Todo {
   }
   get(indexOfTodo)
   {
-    
+    return listOfTodos[indexOfTodo];
+  }
+  clear(){
+    listOfTodos = [];
   }
 }
+
+let start = new Todo();
+start.add("Teri maa ki chut");
+start.remove(0); //not working
+start.update(0, "SExy")
+start.getAll();
+start.get();
+start.clear();
+console.log(listOfTodos);
 
 module.exports = Todo;
