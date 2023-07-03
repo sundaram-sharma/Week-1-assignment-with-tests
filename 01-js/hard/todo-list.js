@@ -10,13 +10,16 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-todo-list`
 */
-var listOfTodos = []
+var listOfTodos = [{
+                    id: 0, 
+                  lists: ""
+                  }]
 
 class Todo {
 
   add(todo)
   {
-    listOfTodos.push(todo)
+    listOfTodos.push(listOfTodos.id = listOfTodos.id + 1, todo)
   }
   remove(indexOfTodo)
   {
@@ -41,11 +44,11 @@ class Todo {
 
 let start = new Todo();
 start.add("Teri maa ki chut");
-start.remove(0); //not working
-start.update(0, "SExy")
-start.getAll();
-start.get();
-start.clear();
+//start.remove(0); //not working
+//start.update(0, "SExy")
+//start.getAll();
+//start.get();
+//start.clear();
 console.log(listOfTodos);
 
 module.exports = Todo;
