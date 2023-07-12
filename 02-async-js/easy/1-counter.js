@@ -1,11 +1,12 @@
-// var counter = 0;
+var counter = 0;
 
-// function printer(){
-//     counter = counter + 1
-//     console.log(counter)
-// }
+function printer(){
+    console.clear()
+    counter = counter + 1
+    console.log(counter)
+}
 
-// setInterval(printer, 1000)
+setInterval(printer, 1000)
 
 // var counter = 1
 
@@ -20,6 +21,4 @@
 // setTimeout(printer, 1000)
 
 
-
-fs.readFile('a.txt','utf8', printFile);
 

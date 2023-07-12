@@ -8,4 +8,5 @@ function printer()
             
         setTimeout(printer, 1000)
     }
-    printer();
+    
+printer();
